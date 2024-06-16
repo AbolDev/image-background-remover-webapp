@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Image</h2>
+        <div class="file-upload-wrapper">
+            <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" hidden>
+            <label for="fileInput" class="fileInputLabel">Select File</label>
+        </div>
+        <div class="file-name-wrapper">
+            <span id="fileName" class="fileName"></span>
+        </div>
+        <button id="uploadBtn" class="uploadBtn">Upload</button>
+        <div id="statusMessage"></div>
+        <div id="uploadedImageContainer"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Image</h2>
+        <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
+        <label for="fileInput" class="fileInputLabel">Select File</label>
+        <button id="uploadBtn" class="uploadBtn">Upload</button>
+        <div id="statusMessage"></div>
+        <div id="uploadedImageContainer"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> -->

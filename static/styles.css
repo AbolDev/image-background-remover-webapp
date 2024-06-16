@@ -1,0 +1,96 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileInputLabel {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.fileInputLabel:hover {
+    background-color: #45a049;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#statusMessage {
+    margin-top: 20px;
+}
+
+#uploadedImageContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    display: none;
+}
+
+#uploadedImageContainer.show {
+    display: inline-block;
+}
+
+#uploadedImageContainer img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#uploadedImageContainer.error {
+    display: none;
+}
+
+#error + .downloadBtn {
+    display: none;
+}
+
+.downloadBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.downloadBtn:hover {
+    background-color: #45a049;
+}
