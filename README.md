@@ -38,8 +38,6 @@ To run this project locally, follow these steps:
 
 Here is an example of an image before and after background removal:
 
-### Before and After
-
 ![Before and After Image](t4.png)
 
 ### Processed Image
