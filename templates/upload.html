@@ -3,52 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background remover</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Professional Background Remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h2>Upload Image</h2>
-        <div class="file-upload-wrapper">
-            <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" hidden>
-            <label for="fileInput" class="fileInputLabel">Select File</label>
-        </div>
-        <div class="file-name-wrapper">
-            <span id="fileName" class="fileName"></span>
-        </div>
-        <button id="uploadBtn" class="uploadBtn">Upload</button>
-        <div id="statusMessage"></div>
-        <div id="uploadedImageContainer"></div>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <div class="slider round"></div>
+        </label>
+        <span>Dark Mode</span>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <div class="container">
+        <div class="header">
+            <h1>Background Remover</h1>
+            <p>Remove background from your images in seconds</p>
+        </div>
+
+        <div class="upload-container">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-icon">📁</div>
+                <div class="drop-zone-text">
+                    <strong>Click to upload</strong> or drag and drop
+                </div>
+                <p>Supports JPG, PNG</p>
+                <input type="file" id="fileInput" accept="image/png, image/jpeg" hidden>
+            </div>
+
+            <div class="image-editor" id="imageEditor" style="display: none;">
+                <div class="image-preview">
+                    <img id="imagePreview" alt="Preview">
+                    <button class="close-button" id="closeButton">&times;</button>
+                    <div class="loading-overlay" id="loadingOverlay">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="removeButton" class="button">Remove Background</button>
+                </div>
+            </div>
+
+            <div class="comparison-slider" id="comparisonSlider" style="display: none;">
+                <img id="originalImage" alt="Original">
+                <img id="processedImage" alt="Processed">
+                <div class="slider-handle" id="sliderHandle"></div>
+            </div>
+            <div class="actions">
+                <button class="button download-button" id="downloadButton" style="display: none;">Download Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background remover</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h2>Upload Image</h2>
-        <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
-        <label for="fileInput" class="fileInputLabel">Select File</label>
-        <button id="uploadBtn" class="uploadBtn">Upload</button>
-        <div id="statusMessage"></div>
-        <div id="uploadedImageContainer"></div>
-    </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html> -->
